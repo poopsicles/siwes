@@ -1,0 +1,50 @@
+#set text(
+    font: "New Computer Modern",
+    fill: white
+)
+
+#set heading (
+  numbering: "1."
+)
+
+#set par(hanging-indent: 0.5cm)
+
+#set page(
+  fill: black
+)
+
+= Super important academic heading here
+
+Content, get your content here.
+
+_Italics content here._
+
+I will save Nigeria by:
+
++ Eating lots of noodles
+  - Instant noodles
+  - Imported noodles
+  - _Candy(?!)_ noodles
++ Drinking Ribena
++ Having fun
+
+Einstein said $E = m c^2$ and he was mostly wrong tbh.
+
+Others were like $F = m a, A = 1/2 a t ^ 2 + u t$
+
+And a third guy was like: $ rho = M / v $
+
+See @inception for details
+
+
+#figure(
+  image("inception.png", width: 70%),
+  caption: ["this text being made by a _live_ studio audence"]
+)
+
+#figure(
+  image("inception.png", width: 70%),
+  caption: ["this text being made by a _live_ studio audence"]
+) <inception>
+
+#lorem(100)
