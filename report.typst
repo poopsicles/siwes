@@ -1,50 +1,82 @@
 #set text(
     font: "New Computer Modern",
-    fill: white
+    size: 12pt,
 )
-
-#set heading (
-  numbering: "1."
-)
-
-#set par(hanging-indent: 0.5cm)
 
 #set page(
-  fill: black
+    paper: "a4",
+    numbering: "1 / 1"
 )
 
-= Super important academic heading here
+STUDENT INDUSTRIAL WORK EXPERIENCE SCHEME (SIWES)
 
-Content, get your content here.
+FROM MARCH $51^"th"$ TO AUGUST $100^"th"$
 
-_Italics content here._
+AT CONVERGE GLOBAL CONCEPT TECHNOLOGIES
 
-I will save Nigeria by:
+The Quad, No. 20 Layi Yusuf Crescent, Lekki Phase 1, Lagos State, Nigeria
 
-+ Eating lots of noodles
-  - Instant noodles
-  - Imported noodles
-  - _Candy(?!)_ noodles
-+ Drinking Ribena
-+ Having fun
+\<converge-logo\>
 
-Einstein said $E = m c^2$ and he was mostly wrong tbh.
+A Technical Report by
 
-Others were like $F = m a, A = 1/2 a t ^ 2 + u t$
+Fumnanya Mowete, 20CG028103
 
-And a third guy was like: $ rho = M / v $
+Submitted to The Department of Computer and Information Sciences, College of Science and Technology, Covenant University
 
-See @inception for details
+_in partial fulfilment for the award of the degree of Bachelor of Science (BSc), Computer Science_
 
+Covenant University, Ota, Ogun, Nigeria
 
-#figure(
-  image("inception.png", width: 70%),
-  caption: ["this text being made by a _live_ studio audence"]
+\<cu-logo\>
+
+#pagebreak(weak: true)
+
+#set page (
+    header: align(right)[_SIWES Report, Fumnanya Mowete_],
 )
 
-#figure(
-  image("inception.png", width: 70%),
-  caption: ["this text being made by a _live_ studio audence"]
-) <inception>
+= Dedication
+
+I dedicate this to my parents -- for their blood, sweat, tears, and sacrifice.
+
+#lorem(50)
+
+#pagebreak(weak: true)
+
+= Acknowledgements
+
+I acknowledge my friends, my supervisor, my something else.
 
 #lorem(100)
+
+#pagebreak(weak: true)
+
+= Abstract
+
+This report covers my industrial work experience placement at Converge Technologies, which started on 
+
+It'll go into detail about all the things
+
+#lorem(100)
+
+#pagebreak(weak: true)
+
+#outline(title: "Table of Contents", target: heading, indent: true)
+
+#outline(title: "Table of Figures", target: figure, indent: true)
+
+#pagebreak(weak: true)
+
+#set heading(
+    numbering: "1.",
+    supplement: [Chapter]
+)
+
+= Introduction <intro>
+
+== Student Industrial Working Scheme (SIWES)
+
+In @intro we dd shit
+
+#lorem(30)
