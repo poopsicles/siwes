@@ -5,7 +5,7 @@
 
 #set page(
     paper: "a4",
-    numbering: "1 / 1"
+    numbering: "i."
 )
 
 STUDENT INDUSTRIAL WORK EXPERIENCE SCHEME (SIWES)
@@ -14,21 +14,23 @@ FROM MARCH $51^"th"$ TO AUGUST $100^"th"$
 
 AT CONVERGE GLOBAL CONCEPT TECHNOLOGIES
 
-The Quad, No. 20 Layi Yusuf Crescent, Lekki Phase 1, Lagos State, Nigeria
+THE QUAD, 20 LAYI YUSUF CRESENT, LEKKI, LAGOS, NIGERIA
 
-\<converge-logo\>
+// TODO ADD CONVERGE LOGO
 
-A Technical Report by
+A TECHNICAL REPORT, BY
 
-Fumnanya Mowete, 20CG028103
+FUMNANYA KAVAN MOWETE, 20CG028103
 
-Submitted to The Department of Computer and Information Sciences, College of Science and Technology, Covenant University
+SUBMITTED TO THE DEPARTMENT OF COMPUTER AND INFORMATION SCIENCES, COLLEGE OF SCIENCE AND TECHNOLOGY, COVENANT UNIVERSITY
 
-_in partial fulfilment for the award of the degree of Bachelor of Science (BSc), Computer Science_
+_IN PARTIAL FULFILMENT FOR THE AWARD OF THE DEGREE OF BACHELOR OF SCIENCE (BSc), COMPUTER SCIENCE_
 
-Covenant University, Ota, Ogun, Nigeria
+COVENANT UNIVERSITY, OTA, OGUN, NIGERIA
 
-\<cu-logo\>
+// TODO ADD CU LOGO
+
+SEPTEMBER 2023
 
 #pagebreak(weak: true)
 
@@ -64,7 +66,7 @@ It'll go into detail about all the things
 
 #outline(title: "Table of Contents", target: heading, indent: true)
 
-#outline(title: "Table of Figures", target: figure, indent: true)
+#outline(title: "List of Figures", target: figure, indent: true)
 
 #pagebreak(weak: true)
 
@@ -73,10 +75,100 @@ It'll go into detail about all the things
     supplement: [Chapter]
 )
 
+#set page(
+  numbering: "1." 
+)
+
+#counter(page).update(1)
+
+
+// #show heading: it => [
+//   #set align(center)
+//   #set text(12pt, weight: "regular")
+//   #block([ 
+//     #smallcaps(it.body) #counter(heading).display()
+//   ])
+// ]
+
 = Introduction <intro>
 
 == Student Industrial Working Scheme (SIWES)
 
-In @intro we dd shit
+Write a bit about SIWES from here
 
-#lorem(30)
+https://www.siwes.itf.gov.ng/Identity/LandingPage/siwes
+
+=== Collection of Relevant SIWES Documents
+
+Talk about going to the office getting the logbook and forms, and scanning them for safekeeping
+
+=== Internship Application and Acceptance
+
+talk about the in-person interview, emails, and acceptance 
+
+// TODO add figure of emails and acceptance letter
+
+== About the Company: Converge Technologies
+
+=== Historical background
+
+talk about stuff and location, vision, mission
+
+// add figure of google maps location
+
+=== Services offered
+
+talk about partnership with RH
+
+=== Organisational structure
+
+// make diagram?
+
+=== Internship policy
+
+== Submission of documents to ITF
+
+// figure of forms submitted - 8, SCAF, acceptance letter
+
+== Commencement of internship
+
+talk about getting the HSE breifing, getting email setup, getting introduced around, getting a keycard to access the building, maybe lunch?
+
+units: DSA (datacentre...)
+
+met with my supervisor once every week to discuss
+got visited by one uni supervisor
+
+#pagebreak(weak: true)
+
+= Facilities available
+
+== Facilities & Tools
+
++ Laptop
++ Computer Monitor
++ Printer
++ Wi-Fi Access Point
++ Red Hat Portal
++ Enterprise Linux
++ Windows Server 2019
++ Microsoft Teams
++ Company email
++ Mozilla Thunderbird
++ Gitlab
+
+== Quality of supervision
+
+something self paced, weekly meetings, completing the courses, doing proof-of-concepts
+
+== Knowledge gained
+
+=== Technical skills
+Red Hat stuff, manageengine stuff, luinux
+
+=== Trainings completed
+list of courses and material
+
+=== Soft skills
+team relations etc.
+
