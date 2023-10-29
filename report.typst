@@ -1,6 +1,6 @@
 #set text(
-    font: "New Computer Modern",
-    size: 12pt,
+    font: "Times New Roman",
+    size: 14pt,
 )
 
 #set page(
@@ -8,29 +8,41 @@
     numbering: "i."
 )
 
-STUDENT INDUSTRIAL WORK EXPERIENCE SCHEME (SIWES)
+// todo add show riles for trademarks like Windows Server, Red Hat
 
-FROM MARCH $51^"th"$ TO AUGUST $100^"th"$
+#align(
+    center,
+    box(
+        [
+            STUDENT INDUSTRIAL WORK EXPERIENCE SCHEME (SIWES)
 
-AT CONVERGE GLOBAL CONCEPT TECHNOLOGIES
+            // TODO: put actual date
 
-THE QUAD, 20 LAYI YUSUF CRESENT, LEKKI, LAGOS, NIGERIA
+            FROM MARCH $51^"th"$ TO AUGUST $100^"th"$
 
-// TODO ADD CONVERGE LOGO
+            AT CONVERGE GLOBAL CONCEPT TECHNOLOGIES
 
-A TECHNICAL REPORT, BY
+            THE QUAD, 20 LAYI YUSUF CRESENT, LEKKI, LAGOS, NIGERIA
 
-FUMNANYA KAVAN MOWETE, 20CG028103
+            #image("assets/converge.png", width: 30%)
 
-SUBMITTED TO THE DEPARTMENT OF COMPUTER AND INFORMATION SCIENCES, COLLEGE OF SCIENCE AND TECHNOLOGY, COVENANT UNIVERSITY
+            A TECHNICAL REPORT, BY
 
-_IN PARTIAL FULFILMENT FOR THE AWARD OF THE DEGREE OF BACHELOR OF SCIENCE (BSc), COMPUTER SCIENCE_
+            FUMNANYA KAVAN MOWETE, 20CG028103
 
-COVENANT UNIVERSITY, OTA, OGUN, NIGERIA
+            SUBMITTED TO THE DEPARTMENT OF COMPUTER AND INFORMATION SCIENCES, COLLEGE OF SCIENCE AND TECHNOLOGY, COVENANT UNIVERSITY
 
-// TODO ADD CU LOGO
+            _IN PARTIAL FULFILMENT FOR THE AWARD OF THE DEGREE OF BACHELOR OF SCIENCE (BSc), COMPUTER SCIENCE_
 
-SEPTEMBER 2023
+            COVENANT UNIVERSITY, OTA, OGUN, NIGERIA
+
+            #image("assets/covenant.png", width: 17%)
+
+            SEPTEMBER 2023
+        ]
+    )
+)
+
 
 #pagebreak(weak: true)
 
@@ -38,33 +50,56 @@ SEPTEMBER 2023
     header: align(right)[_SIWES Report, Fumnanya Mowete_],
 )
 
+// #set par (
+//     leading: 1.5em
+// )
+
+// #show par: set block(spacing: 3em)
+
+// #show heading: it => [
+//     #set text(14pt, weight: "bold")
+//     #block([
+//         #it.body
+//         #v(1em)
+//     ])
+// ]
+
+
 = Dedication
 
-I dedicate this to my parents -- for their blood, sweat, tears, and sacrifice.
+I dedicate this to my parents -- for their blood, sweat, tears, and sacrifice in getting me to where I am today. Without them, I would be nowhere near capable of putting myself though university.
 
-#lorem(50)
+Their love, support, and guidance make life worth living to the fullest and constantly encourages me to do my best in all the endevours I pursue.
 
 #pagebreak(weak: true)
 
 = Acknowledgements
 
-I acknowledge my friends, my supervisor, my something else.
+I wish to acknowledge the Almighty God first, because without him, none of this would have been possible in any way.
 
-#lorem(100)
+I also would like to acknowledge my supervisor at work, Mr. Ugochukwu Okorie. He was exceedingly patient with me throughout the duration of my stay and tried his best to guide me into being the best intern I could be.
+
+Covenant University, my institution of learning, also deserves praise because their commitment to full-scale blended learning gave me an edge over other applicants as I was able to demonstrate prior knowledge of applicable skills in the workplace that I had acquired from Coursera.
+
+Lastly, to my friends who were there for me, offering encouragement and motivation throughout the period, I'm grateful for each and every one of you.
 
 #pagebreak(weak: true)
 
 = Abstract
 
-This report covers my industrial work experience placement at Converge Technologies, which started on 
+// TODO: add actual dates
 
-It'll go into detail about all the things
+This report goes over the highlights of my industrial work experience placement at Converge Technologies, which laste for 24 weeks and started on March $55^"th"$ and ended August $20^"th"$ 2023.
 
-#lorem(100)
+It provides an overview of the entire process from start to finish, the background information behind the programme, the work I performed at the company, its relevance to my course of study, as well as the challenges and issues I faced.
+
+The report also covers the company's goals, work ethics, business practices, activities, and culture and their influence on the time I spent there.
 
 #pagebreak(weak: true)
 
 #outline(title: "Table of Contents", target: heading, indent: true)
+
+#pagebreak(weak: true)
 
 #outline(title: "List of Figures", target: figure, indent: true)
 
@@ -81,7 +116,6 @@ It'll go into detail about all the things
 
 #counter(page).update(1)
 
-
 // #show heading: it => [
 //   #set align(center)
 //   #set text(12pt, weight: "regular")
@@ -90,21 +124,40 @@ It'll go into detail about all the things
 //   ])
 // ]
 
-= Introduction <intro>
+= Introduction 
 
 == Student Industrial Working Scheme (SIWES)
 
 Write a bit about SIWES from here
-
 https://www.siwes.itf.gov.ng/Identity/LandingPage/siwes
+
+The SIWES #footnote("Student Industial Working Experience Scheme") is a thing so like, lol haha
+
+It's administered by the ITF #footnote("Industrial Training Fund")
+
+@siwes @itf
 
 === Collection of Relevant SIWES Documents
 
-Talk about going to the office getting the logbook and forms, and scanning them for safekeeping
+During the first semester of my third year, I met Mr. B. O. Odusote to collect the things I needed. It consisted of the following:
+
+- A letter of introduction that authorised us for the SIWES training.
+- A logbook - in which I was to note down my day-to-day activities along with relevant diagrams and sketches.
+- A SCAF #footnote("Student Commencement of Attachment Form") - to be submitted at the commencement of the thing.
+- An ITF Form 8 with list of offices.
+- An ITF Form C - an assessment of the industrial training.
+
+I then proceeded to make scans of the forms for safekeeping. 
+
+After that we had an orientation with some officials from the university, along with the Dean of Student Affairs, to instruct us on our conduct during the internship period and answer all the questions that we had.
+
+// TODO: add figures of scans
 
 === Internship Application and Acceptance
 
-talk about the in-person interview, emails, and acceptance 
+I sent an email to the company with my résumé and SIWES letter and was invited for a physical chat on the $1^"st"$ of March, 2023. During the interview, I was asked about my previous experience working with Linux systems and other relevant questions.
+
+After the interview, I was reached out to resume on the $13^"th"$ of March, 2023. I was also instrcuted to print out a copy of their internal internship form and fill it, for record-keeping.
 
 // TODO add figure of emails and acceptance letter
 
@@ -126,18 +179,35 @@ talk about partnership with RH
 
 === Internship policy
 
-== Submission of documents to ITF
+== Submission of documents
+
+=== To CU SIWES Office
+
+- Acceptance letter: I sent an email to the SIWES office confirming the receipt of my acceptance letter, sent by the company's HR department. 
+
+=== To ITF
+
+- SCAF: This was filled and submitted on March XXth, in order to meet the two-week deadline imposed by ITF for the submission of the form
 
 // figure of forms submitted - 8, SCAF, acceptance letter
 
 == Commencement of internship
 
-talk about getting the HSE breifing, getting email setup, getting introduced around, getting a keycard to access the building, maybe lunch?
+Upon my resumption on March XXth, I was given a HSE #footnote("Health, Safety and Environment") walkthrough of the company in order to minimize hazards and prevent accidents at the workplace. This involved instructing me on the emergency evacuation procedures, what the various alarm systems signified, and and showing me the emergency exits and muster points.
 
-units: DSA (datacentre...)
+I was then given my personalised keycard for getting through the office doors, as well as my official email address for all company communication.
 
-met with my supervisor once every week to discuss
-got visited by one uni supervisor
+After that, I was introduced to my manager, Mr. Ugochukwu Okorie, head of the Datacentre, Security & Automation team -- to whom I would be directly reporting. He gave me an overview of my expected responsibilities and tasks, which included:
+
+- Learning about various Red Hat products and solutions offered by the company.
+
+- Attending technical meetings and shadowing employees and contractors while they performed various tasks.
+
+- Helping with various support tasks around the office.
+
+- Setting up, documenting and testing proofs of concept for proffered solutions to client companies.
+
+We also discussed how frequent I was expected to check in with him, and assignments I was expected to embark upon.
 
 #pagebreak(weak: true)
 
@@ -145,17 +215,106 @@ got visited by one uni supervisor
 
 == Facilities & Tools
 
-+ Laptop
-+ Computer Monitor
-+ Printer
-+ Wi-Fi Access Point
-+ Red Hat Portal
-+ Enterprise Linux
-+ Windows Server 2019
+Converge makes use of various tools, consisting of both hardware and software, to make day-to-day running of the company efficient. As an intern, I was entitled to some of these -- some notable ones are:
+
++ *Laptop*:
+
+  Laptop computers provide employees with mobility and flexibility, allowing them to work securely from various locations while still adhering to the company's security protocols. I was given a company-branded Hewlett-Packard Probook 650 G1 for official use.
+
+  #figure(
+    image("assets/probook.jpg", width: 50%),
+    caption: "A HP ProBook 650 G1",
+  )
+
++ *Computer Monitor*:
+
+  A computer monitor is essential for efficient work, which provided me with a larger display for employees to manage and view data securely without compromising visibility. I was provided with a Dell 34" monitor.
+
+  #figure(
+    image("assets/dell.png", width: 50%),
+    caption: "A Dell S3423DWC monitor"
+  )
+
++ *Official Email Address*:
+
+   The company chose to host its email over a more general-purpose solution in order to ensure confidentiality, integrity, and availability of business-related communications, thereby safeguarding sensitive information.
+
+  #figure(
+    image("assets/hostgator.png", width: 120%),
+    caption: "My inbox on the company-hosted email website"
+  )
+
++ *Mozilla Thunderbird*:
+
+  Thunderbird was chosen as it is the premier open-source email client that helps in securely managing and accessing company email, with robust features for encryption, calendar management, and spam filtering.
+
+  #figure(
+    image("assets/thunderbird-cal.png"),
+    caption: "The calendar view in Thunderbird"
+  )
+
++ *All-in-one Colour Printer*:
+
+  There's multiple printers on premises for producing hard copies of documents -- which can be necessary for secure documentation, especially when sensitive information needs to be physically stored or shared securely. One of these was a Hewlett-Packard LaserJet Pro MFP M28a.
+
+  #figure(
+    image("assets/laserjet.png", width: 50%),
+    caption: "A HP LaserJet Pro MFP M28a"
+  )
+
++ *Wi-Fi Access Point*:
+
+  We were provided with secure and controlled wireless network access, allowing us to work from various locations within the company premises while maintaining network security standards. The internet was provided by Spectranet.
+
+  #figure(
+    image("assets/spectranet.png", width: 50%),
+    caption: "Spectranet logo"
+  )
+
++ *Red Hat Portal*:
+
+  The Red Hat Portal is a secure platform for accessing and managing Red Hat Enterprise Linux subscriptions and support, which is vital for maintaining a secure and reliable operating environment. I primarily engaged with my coursework material on the Partner Training portal.
+
+  #figure(
+    image("assets/portal.png"),
+    caption: "The Training Portal's 'My Completed Training' page"
+  )
+
++ *Enterprise Linux*:
+
+  Enterprise Linux is known for its security features and reliability, making it an excellent choice for a secure company environment, ensuring the protection of critical data and applications.
+
+  #figure(
+    image("assets/rhel.png"),
+    caption: "The Red Hat Enterprise Linux desktop"
+  )
+
++ *Windows Server 2019*:
+
+  Windows Server 2019 provides a secure and stable platform for hosting critical company applications and services, with widespread support for commonly used technologies like Active Directory and built-in security features for data protection.
+
+  #figure(
+    image("assets/rhel.png"),
+    caption: "The Red Hat Enterprise Linux desktop"
+  )
+
 + Microsoft Teams
-+ Company email
-+ Mozilla Thunderbird
-+ Gitlab
+
+  Teams offers a secure platform for communication and collaboration, including features like end-to-end encryption and multi-factor authentication, ensuring confidential discussions and file sharing.
+
+  #figure(
+    image("assets/teams.png"),
+    caption: "The Teams window in the Chat view"
+  )
+
++ *GitLab*:
+
+  Gitlab is a secure source code management and version control platform, essential for safeguarding proprietary source code and tracking changes while ensuring the integrity of the codebase. In addition, its self-hosting capabilities make it attractive for enterprise as it can be modified to meet specific security and operational requirements.
+
+  #figure(
+    image("assets/gitlab.png"),
+    caption: "A code repository hosted on GitLab"
+  )
 
 == Quality of supervision
 
@@ -172,3 +331,53 @@ list of courses and material
 === Soft skills
 team relations etc.
 
+#pagebreak(weak: true)
+
+= Contributions
+
+talk about how contrubtions are good 
+
+An internship requires so much more than simply carrying out daily tasks and routines; it demands the chance to be exceptional in one's ideas and contributions through creativity and automation. It entails contributing to the organization's goals and becoming an effective team member. Pertinence Group made certain that interns were treated as more than just junior temporary members, but as important innovative and youthful team members who could contribute to the organization's highly impactful and innovation-driven activities.
+
+== Applicability of knoledge in
+
+=== field of study and educational career
+
+talk abotu applicability of stuff
+
+=== Converge
+
+=== Larger society
+
+=== Bridging gaps in knowledge with curriculum
+
+=== Relation to culture
+
+== Challenges
+
+=== By me
+
+=== By company
+
+talk abotu profit margins for Q1
+
+== Projects
+
+=== Windows server
+
+=== VMs 
+
+=== ManageEngine
+
+= Conclusion & Recommendations
+
+== Conclusion
+
+== Recomendations
+
+tbh i've always been a fan of @harry
+and my fave music @electronic
+
+#pagebreak()
+
+#bibliography("reference.yml", title: "References", style: "apa")

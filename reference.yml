@@ -1,0 +1,26 @@
+harry:
+    type: Book
+    title: Harry Potter and the Order of the Phoenix
+    author: Rowling, J. K.
+    volume: 5
+    page-total: 768
+    date: 2003-06-21
+
+electronic:
+    type: Web
+    title: Ishkur's Guide to Electronic Music
+    serial-number: v2.5
+    author: Ishkur
+    url: http://www.techno.org/electronic-music-guide/
+
+siwes:
+    type: Web
+    title: More on SIWES
+    url: https://www.siwes.itf.gov.ng/Identity/LandingPage/siwes
+    date: 2023
+
+itf:
+    type: Web
+    title: "Industrial Training Fund - Who We Are"
+    url: https://itf.gov.ng/about/
+    date: 2023
