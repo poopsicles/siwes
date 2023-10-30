@@ -1,5 +1,6 @@
 #set text(
     font: "Times New Roman",
+    // font: "New Computer Modern",
     size: 14pt,
 )
 
@@ -197,7 +198,7 @@ Upon my resumption on March XXth, I was given a HSE #footnote("Health, Safety an
 
 I was then given my personalised keycard for getting through the office doors, as well as my official email address for all company communication.
 
-After that, I was introduced to my manager, Mr. Ugochukwu Okorie, head of the Datacentre, Security & Automation team -- to whom I would be directly reporting. He gave me an overview of my expected responsibilities and tasks, which included:
+After that, I was introduced to my manager, Mr. Ugochukwu Okorie, head of the Data Centre, Security & Automation team -- to whom I would be directly reporting. He gave me an overview of my expected responsibilities and tasks, which included:
 
 - Learning about various Red Hat products and solutions offered by the company.
 
@@ -223,7 +224,7 @@ Converge makes use of various tools, consisting of both hardware and software, t
 
   #figure(
     image("assets/probook.jpg", width: 50%),
-    caption: "A HP ProBook 650 G1",
+    caption: "A HP ProBook 650 G1 laptop",
   )
 
 + *Computer Monitor*:
@@ -289,6 +290,18 @@ Converge makes use of various tools, consisting of both hardware and software, t
     caption: "The Red Hat Enterprise Linux desktop"
   )
 
++ *Podman*:
+
+  Podman is a container engine -- used for effectively managing and sandboxing applications, allowing them to be efficiently rolled out and scaled as needed. It also has the feature of primarily running without escalated security permissions, which gives it an edge over its alternatives.
+
+  // TODO: podman hellow world figure
+
++ *Kubernetes*:
+
+  Kubernetes is primarily used for container orchestration and automating software deployment, scaling, and management by grouping containers as pods -- which can then be managed effectively.
+
+  // TODO: k8s figures
+
 + *Windows Server 2019*:
 
   Windows Server 2019 provides a secure and stable platform for hosting critical company applications and services, with widespread support for commonly used technologies like Active Directory and built-in security features for data protection.
@@ -298,7 +311,9 @@ Converge makes use of various tools, consisting of both hardware and software, t
     caption: "The Red Hat Enterprise Linux desktop"
   )
 
-+ Microsoft Teams
+// TODO: add vmware, manageengine
+
++ *Microsoft Teams*:
 
   Teams offers a secure platform for communication and collaboration, including features like end-to-end encryption and multi-factor authentication, ensuring confidential discussions and file sharing.
 
@@ -318,40 +333,107 @@ Converge makes use of various tools, consisting of both hardware and software, t
 
 == Quality of supervision
 
-something self paced, weekly meetings, completing the courses, doing proof-of-concepts
+As a member of the DSA #footnote("Data Centre, Security & Automation") team, I was assigned the head manager, Mr. Ugochukwu Okorie as my primary supervisor. Additionally I was to occasionally check in with the General Manager, Onyekachi Nnamdi, so that any company-wide concerns I have could be relayed to her.
 
-== Knowledge gained
+Mr. Ugochukwu had a talk with me about my prior familiarity with Linux and interest in system administration and security and decided that it would be best for us to have biweekly meetings discussing what I'd done in the previous fortnight. He also gave me various tasks and assignments to complete and ensured I was following along with all the activites of the rest of the team, which involved attending and participating in meetings, and being entrusted with some trivial tasks.
 
-=== Technical skills
-Red Hat stuff, manageengine stuff, luinux
+Along with these, he also taught me to think of the business and economic factors of any technical solution -- the lesson being a product, no matter how impressive, means nothing if it's not commercially attractive to clients.
 
-=== Trainings completed
-list of courses and material
+The supervision provided was excellent, as everything was done with the aim of making my stay comfortable while also allowing me to branch out, make necessary mistakes, and learn from those experiences.
+
+// business relations
+
+// something self paced, weekly meetings, completing the courses, doing proof-of-concepts
+
+== Knowledge Gained
+
+I learnt numerous things from my experience at the company -- with everything from hard techical skills that involve working with software to soft interpersonal skills that deal with relating healthily with others in the office.
+
+Some of the more notable ones are:
+
+=== Technical Skills
+
+// add cite
+- _Usage of standard POSIX #footnote("Portable Operating System Interface") tools_: Command-line utilities like `bash` (the GNU Bourne-Again Shell), `grep` (file pattern searcher) and `man` (manual pager) are irreplacable when working with servers all over the globe. They provide a standard way of interfacing with the internal workings of a system -- and these behaviours are laid out in the POSIX specification @posix.
+
+  Many modern OSes conform to this standard @unix-certified, so knowing how to use them correctly is an essential tool in the arsenal of a system administrator. Therefore, I learnt basic and advanced concepts related to these like shell redirection, task scheduling, and storage configuration, along with user and group management.
+
+  #figure(
+    image("assets/coreutils.png", width: 80%),
+    caption: [The GNU core utilities #cite("coreutils")]
+  )
+
+- _Virtualisation with VMWare ESXi_: Virtualisation logically divides computer resources allowing hardware to be simulated -- this lets multiple operating systems run on the same physical hardware. ESXi improves on traditional hosted virtualisation by being a type-1 hypervisor, where it runs without a traditional operating system @hypervisors.
+
+  In enterprise, this enables numerous operating systems to be run simulaneously, while isolating them from each other, enhancing manageability and security.
+
+  During my internship, I was tasked with creation, maintenance, and overall administration of several virtual machines.
+
+  // reference OS course
+
+- _Containerisation with Podman_: Containerisation packages applications, along with any required runtimes and dependencies, into units that can run independently and reliably on any computer system. They have the advantage of being lighter and more efficient than full-blown virtual machines, as well as offering more control over the scale of applications. Podman is the premier tool of the OCI #footnote("Open Containers Initiative") and has support for running containers without escalated privileges -- which dramatically increases its security compared to other container engines.
+
+  Learning the ins and outs of Podman was one of the key experiences I had during my internship.
+
+- _Container orchestration with Kubernetes_: Industrial-scale applications can consist of hundreds of containers working in tandem - and organising them all by hand becomes infeasible. Kubernetes aims to solve this problem by coordinating, onfiguring, and managing containers automatically. 
+
+  It does this by dividing computing resources in the cluster into two groups -- the control plane which coordinates all the other nodes, and the nodes themselves on which the actual containers are deployed.
+
+  Red Hat has supported Kubernetes from inception as part of their OpenShift offering, and as such I was required to delve into it.
+
+  // TODO: cite https://www.redhat.com/en/blog/red-hat-and-google-collaborate-kubernetes-manage-docker-containers-scale 
+
+  // add https://en.wikipedia.org/wiki/File:Kubernetes.png
+
+- _Cloud development with the Red Hat OpenShift Container Platform_: OpenShift is a cloud platform that makes it easy to deploy and manage containerised applications on the hybrid cloud -- whether fully on the edge, or on premises. It builds on top of Kubernetes by adding tools like Prometheus for reliability monitoring and wrapping them all up in a simple, easy-to-use interface -- allowing enterprises to adopt it with ease and focus on actually maintaining their application.
+ 
+ It also utilises Red Hat Enterprise Linux for a consistent platform anywhere it runs.
+
+ // TODO: add that thing where openshift build on top of k8s
+
+- _Systems management with Red Hat Satellite_: Satellite is used to deploy and manage RHEL #footnote[Red Hat Enterprise Linux] hosts. It manages updates and automatically downloads them locally in order to make it easier to deploy to the fleet.
+
+It also supports separating hosts into different "environments", in order to facilitate software deployment and testing.
+
+- _Automation with Red Hat Ansible Automation Platform_: Red Hat Ansible Automation Platform is an end-to-end automation platform to configure systems, deploy software, and orchestrate advanced workflows. It includes resources to create, manage, and scale across the entire enterprise.
+
+  It helps to manage multiple machines using instructions stored in "playbooks", and when done well, playbooks are idempotent -- negating the risks of unwanted side effects.
+
+- Endpoint management with ManageEngine
 
 === Soft skills
-team relations etc.
+
+- _Teamwork_: As a member of an organisation, I was required to work with other employees on projects bigger than any indivdual would have been able to accomplish. I had to learn how to be a good team member in order to pursue the shared agenda.
+
+- _Communication_: Good communication is necessary in an organisation -- without it, structure would break down. I larnt how to use the appropriate channels for various communication (email, notes, etc.) depending on the severity of the message.
+
+- _Networking_: Networking is essential in the real world of business and through my time at Converge, I was able to meet several people of benefit to my career, as well as learnt skills that would enable me to find more. These skills will boost my chances of succeeding in the industry.
+
+- _Effective Research_: A lot of information on the Internet is stored away in obscure posts, blogs and documentation, and sifting through all that to get the parts that you need is an invaluable tool in the field. I learnt about various ways of utilising resources like search engines to acquire hard-to-find information, as well as tools to catalogue and store it.
 
 #pagebreak(weak: true)
 
-= Contributions
+= Contributions of Knowledge Gained
 
-talk about how contrubtions are good 
+The knowledge gained during the course of the internship was highly influential on me -- both at my time in the company, and for the future. 
 
-An internship requires so much more than simply carrying out daily tasks and routines; it demands the chance to be exceptional in one's ideas and contributions through creativity and automation. It entails contributing to the organization's goals and becoming an effective team member. Pertinence Group made certain that interns were treated as more than just junior temporary members, but as important innovative and youthful team members who could contribute to the organization's highly impactful and innovation-driven activities.
+== Applicability of Knowledge
 
-== Applicability of knoledge in
+=== In the Field of Study and Educational Career
 
-=== field of study and educational career
+Typically, Computer Science focuses on the theoretical foundations of modern computing, with a little detour into popular applications like Web Development. But as a result of this internship, I've been exposed to lesser-known areas of Information Technology that are very crucial to modern business infrastrcutre -- system administration, application containerisation, and cloud deployments -- and as a result have more career prospects available to me.
 
-talk abotu applicability of stuff
+=== In Converge
 
-=== Converge
+I was able to work effectively and efficiently in the company. I collaborated with other employees in order to hit deadlines and cheieve goals -- thereby contributinf to the success of the company.
 
-=== Larger society
+=== In the Larger Society
 
-=== Bridging gaps in knowledge with curriculum
+// TODO: get mussion
 
-=== Relation to culture
+== Bridging gaps in knowledge with curriculum
+
+== Relation to culture
 
 == Challenges
 
@@ -369,14 +451,16 @@ talk abotu profit margins for Q1
 
 === ManageEngine
 
+=== Trainings completed
+list of courses and material
+
+#pagebreak(weak: true)
+
 = Conclusion & Recommendations
 
 == Conclusion
 
 == Recomendations
-
-tbh i've always been a fan of @harry
-and my fave music @electronic
 
 #pagebreak()
 
