@@ -38,3 +38,34 @@ coreutils:
     url: https://www.maizure.org/projects/decoded-gnu-coreutils/GNU.png
     author: MaiZure
     date: 2019-09
+
+kubes:
+    type: Web
+    url: https://commons.wikimedia.org/wiki/File:Kubernetes.png
+    author: Khtan66
+    date: 2016-11-29
+
+redhat:
+    type: Article
+    url: https://www.redhat.com/en/blog/red-hat-and-google-collaborate-kubernetes-manage-docker-containers-scale
+    date: 2014-07-10
+    author: Red Hat
+    title: Red Hat and Google collaborate on Kubernetes to manage Docker containers at scale 
+
+openshift:
+    type: Web
+    author: Red Hat
+    url: https://developers.redhat.com/sites/default/files/styles/article_floated/public/2022_OS_product_page%20overview%20platform%20review%20Final.png
+    date: 2023
+
+esxi:
+    type: Web
+    author: Codename Lisa
+    url: https://upload.wikimedia.org/wikipedia/en/1/17/VMwareESXiHostClientSummary.png
+    date: 2017-01-08
+
+converge:
+    type: Web
+    url: https://www.convergroup.com/about-core.php
+    title: About Our Company
+    date: 2023

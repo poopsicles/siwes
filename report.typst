@@ -6,20 +6,20 @@
 
 #set page(
     paper: "a4",
-    numbering: "i."
 )
 
-// todo add show riles for trademarks like Windows Server, Red Hat
+// todo add show rules for trademarks like Windows Server, Red Hat
 
 #align(
     center,
     box(
         [
+            #show par: set block(spacing: 2.7em)
+            #set text(weight: "bold")
+
             STUDENT INDUSTRIAL WORK EXPERIENCE SCHEME (SIWES)
 
-            // TODO: put actual date
-
-            FROM MARCH $51^"th"$ TO AUGUST $100^"th"$
+            FROM MARCH *$13^"th"$* TO *$25^"th"$* AUGUST
 
             AT CONVERGE GLOBAL CONCEPT TECHNOLOGIES
 
@@ -39,7 +39,7 @@
 
             #image("assets/covenant.png", width: 17%)
 
-            SEPTEMBER 2023
+            OCTOBER 2023
         ]
     )
 )
@@ -49,22 +49,23 @@
 
 #set page (
     header: align(right)[_SIWES Report, Fumnanya Mowete_],
+    numbering: "i."
 )
 
-// #set par (
-//     leading: 1.5em
-// )
+#set par (
+    leading: 1.5em
+)
 
-// #show par: set block(spacing: 3em)
+#show: set block(spacing: 2em)
 
-// #show heading: it => [
-//     #set text(14pt, weight: "bold")
-//     #block([
-//         #it.body
-//         #v(1em)
-//     ])
-// ]
-
+// make headings small
+#show heading: it => [
+    #set text(14pt, weight: "bold")
+    #block([
+        #it.body
+        #v(0.5em)
+    ])
+]
 
 = Dedication
 
@@ -88,9 +89,7 @@ Lastly, to my friends who were there for me, offering encouragement and motivati
 
 = Abstract
 
-// TODO: add actual dates
-
-This report goes over the highlights of my industrial work experience placement at Converge Technologies, which laste for 24 weeks and started on March $55^"th"$ and ended August $20^"th"$ 2023.
+This report goes over the highlights of my industrial work experience placement at Converge Technologies, which laste for 24 weeks and started on March $13^"th"$ and ended August $25^"th"$ 2023.
 
 It provides an overview of the entire process from start to finish, the background information behind the programme, the work I performed at the company, its relevance to my course of study, as well as the challenges and issues I faced.
 
@@ -117,26 +116,29 @@ The report also covers the company's goals, work ethics, business practices, act
 
 #counter(page).update(1)
 
-// #show heading: it => [
-//   #set align(center)
-//   #set text(12pt, weight: "regular")
-//   #block([ 
-//     #smallcaps(it.body) #counter(heading).display()
-//   ])
-// ]
+// make it have numbers
+#show heading: it => [
+    #set text(14pt, weight: "bold")
+    #block([
+        #counter(heading).display()
+        #it.body
+        #v(0.5em)
+    ])
+]
 
 = Introduction 
 
 == Student Industrial Working Scheme (SIWES)
 
-Write a bit about SIWES from here
-https://www.siwes.itf.gov.ng/Identity/LandingPage/siwes
+The SIWES #footnote[Student Industial Working Experience Scheme] is a skills training programme administered by the ITF #footnote[Industrial Training Fund] designed to prepare and expose students of higher education for the Iindustrial work situation they are likely to meet after graduation. The Scheme affords students the opportunity of familiarising and exposing themselves to handling equipment and machinery that are usually not available in their institutions. @siwes
 
-The SIWES #footnote("Student Industial Working Experience Scheme") is a thing so like, lol haha
+It aims to:
 
-It's administered by the ITF #footnote("Industrial Training Fund")
+- Make the transition from school to the world of work easier, and enhance students' contacts for later job placement.
 
-@siwes @itf
+- Provide students with an opportunity to apply their knowledge in real work situation thereby bridging the gap between theory and practice.
+
+- Enlist and strengthen employers' involvement in the entire educational process and prepare students for employment after graduation.
 
 === Collection of Relevant SIWES Documents
 
@@ -144,7 +146,7 @@ During the first semester of my third year, I met Mr. B. O. Odusote to collect t
 
 - A letter of introduction that authorised us for the SIWES training.
 - A logbook - in which I was to note down my day-to-day activities along with relevant diagrams and sketches.
-- A SCAF #footnote("Student Commencement of Attachment Form") - to be submitted at the commencement of the thing.
+- A SCAF #footnote[Student Commencement of Attachment Form] - to be submitted at the commencement of the thing.
 - An ITF Form 8 with list of offices.
 - An ITF Form C - an assessment of the industrial training.
 
@@ -152,33 +154,52 @@ I then proceeded to make scans of the forms for safekeeping.
 
 After that we had an orientation with some officials from the university, along with the Dean of Student Affairs, to instruct us on our conduct during the internship period and answer all the questions that we had.
 
-// TODO: add figures of scans
-
 === Internship Application and Acceptance
 
 I sent an email to the company with my résumé and SIWES letter and was invited for a physical chat on the $1^"st"$ of March, 2023. During the interview, I was asked about my previous experience working with Linux systems and other relevant questions.
 
 After the interview, I was reached out to resume on the $13^"th"$ of March, 2023. I was also instrcuted to print out a copy of their internal internship form and fill it, for record-keeping.
 
-// TODO add figure of emails and acceptance letter
+#figure(
+  image("assets/accept-email.png"),
+  caption: "Email correspondence informing me of my acceptance"
+)
+
+#figure(
+  image("assets/accept-letter.jpg", fit: "contain"),
+  caption: "My acceptance letter"
+)
 
 == About the Company: Converge Technologies
 
 === Historical background
 
-talk about stuff and location, vision, mission
+Converge Technologies is a technology services organization that specializes in the deployment of mission-critical technology systems, solutions and services.
 
-// add figure of google maps location
+They are a customer-focused organization providing a range of solutions to meet the changing business demands and challenges of our clients. They are truly passionate about their customers' satisfaction and delight.
+
+Their mission is to deliver cutting edge technologies that trigger business growth and redefine the standards of service delivery at different levels in any organization, while their vision is to become the continent leader and the very best in the solutions they deliver @converge.
+
+They are located in The Quad, 20 Layi Yusuf Cresent, Eti-Osa 106104, Lekki, Lagos
+
+#figure(
+  image("assets/map.png"),
+  caption: "Location of the Converge main office"
+)
 
 === Services offered
 
-talk about partnership with RH
+Converge, in collaboration with our partner Red Hat, plays a pivotal role in delivering mission-critical infrastructure solutions for their clients. By harnessing Red Hat's suite of products, such as RHEL #footnote[Red Hat Enterprise Linux], they cater to diverse business needs in key areas like:
 
-=== Organisational structure
+1. *Data Centre Solutions*: Leveraging RHEL, they provide clients with robust data centre solutions that ensure data integrity, scalability, and high availability. This is essential for businesses handling large volumes of sensitive data and demanding uninterrupted operations, such as financial institutions,.
 
-// make diagram?
+2. *Cloud Deployments*: Red Hat OpenShift enables the company to build agile and secure cloud environments for their clients. This empowers businesses to harness the full potential of cloud technology while maintaining data security and compliance.
 
-=== Internship policy
+3. *Security*: Red Hat's integrates security into its products and solutions, such as SELinux #footnote[Security-Enhanced Linux], which enhances their clients' ability to fortify their infrastructure against cyber threats. These products offer reliable security mechanisms crucial for safeguarding critical business data.
+
+4. *Automation*: Red Hat Ansible Automation Platform is instrumental in streamlining processes for their clients. By automating routine tasks and workflows, they increase efficiency, reduce human error, and allow clients to focus on core business operations.
+
+5. *Virtualisation and Containers*: Combining Red Hat Virtualization and Red Hat OpenShift, they offer clients the best of both worlds. Virtualisation for legacy systems and containerisation for modern, scalable applications. This flexibility is vital in catering to diverse business requirements.
 
 == Submission of documents
 
@@ -186,15 +207,23 @@ talk about partnership with RH
 
 - Acceptance letter: I sent an email to the SIWES office confirming the receipt of my acceptance letter, sent by the company's HR department. 
 
+  #figure(
+    image("assets/offer-letter.png"),
+    caption: "Email correspondence acknowledging receipt of my offer letter"
+  )
+
 === To ITF
 
-- SCAF: This was filled and submitted on March XXth, in order to meet the two-week deadline imposed by ITF for the submission of the form
+- SCAF: This was filled and submitted on March $24^"th"$, in order to meet the two-week deadline imposed by ITF for the submission of the form.
 
-// figure of forms submitted - 8, SCAF, acceptance letter
+  #figure(
+    image("assets/scaf.jpeg"),
+    caption: "Student Commencement of Attachment form"
+  )
 
 == Commencement of internship
 
-Upon my resumption on March XXth, I was given a HSE #footnote("Health, Safety and Environment") walkthrough of the company in order to minimize hazards and prevent accidents at the workplace. This involved instructing me on the emergency evacuation procedures, what the various alarm systems signified, and and showing me the emergency exits and muster points.
+Upon my resumption on March $13^"th"$, I was given a HSE #footnote[Health, Safety and Environment] walkthrough of the company in order to minimize hazards and prevent accidents at the workplace. This involved instructing me on the emergency evacuation procedures, what the various alarm systems signified, and and showing me the emergency exits and muster points.
 
 I was then given my personalised keycard for getting through the office doors, as well as my official email address for all company communication.
 
@@ -219,7 +248,6 @@ We also discussed how frequent I was expected to check in with him, and assignme
 Converge makes use of various tools, consisting of both hardware and software, to make day-to-day running of the company efficient. As an intern, I was entitled to some of these -- some notable ones are:
 
 + *Laptop*:
-
   Laptop computers provide employees with mobility and flexibility, allowing them to work securely from various locations while still adhering to the company's security protocols. I was given a company-branded Hewlett-Packard Probook 650 G1 for official use.
 
   #figure(
@@ -227,9 +255,8 @@ Converge makes use of various tools, consisting of both hardware and software, t
     caption: "A HP ProBook 650 G1 laptop",
   )
 
-+ *Computer Monitor*:
-
-  A computer monitor is essential for efficient work, which provided me with a larger display for employees to manage and view data securely without compromising visibility. I was provided with a Dell 34" monitor.
++ *Computer Monitor*: 
+  A computer monitor is essential for efficient work, which give allowance for a larger display for employees to manage and view data securely without compromising visibility. I was provided with a Dell 34" monitor.
 
   #figure(
     image("assets/dell.png", width: 50%),
@@ -237,7 +264,6 @@ Converge makes use of various tools, consisting of both hardware and software, t
   )
 
 + *Official Email Address*:
-
    The company chose to host its email over a more general-purpose solution in order to ensure confidentiality, integrity, and availability of business-related communications, thereby safeguarding sensitive information.
 
   #figure(
@@ -246,7 +272,6 @@ Converge makes use of various tools, consisting of both hardware and software, t
   )
 
 + *Mozilla Thunderbird*:
-
   Thunderbird was chosen as it is the premier open-source email client that helps in securely managing and accessing company email, with robust features for encryption, calendar management, and spam filtering.
 
   #figure(
@@ -255,16 +280,14 @@ Converge makes use of various tools, consisting of both hardware and software, t
   )
 
 + *All-in-one Colour Printer*:
-
   There's multiple printers on premises for producing hard copies of documents -- which can be necessary for secure documentation, especially when sensitive information needs to be physically stored or shared securely. One of these was a Hewlett-Packard LaserJet Pro MFP M28a.
 
   #figure(
     image("assets/laserjet.png", width: 50%),
-    caption: "A HP LaserJet Pro MFP M28a"
+    caption: "A HP LaserJet Pro MFP M28a printer"
   )
 
 + *Wi-Fi Access Point*:
-
   We were provided with secure and controlled wireless network access, allowing us to work from various locations within the company premises while maintaining network security standards. The internet was provided by Spectranet.
 
   #figure(
@@ -273,7 +296,6 @@ Converge makes use of various tools, consisting of both hardware and software, t
   )
 
 + *Red Hat Portal*:
-
   The Red Hat Portal is a secure platform for accessing and managing Red Hat Enterprise Linux subscriptions and support, which is vital for maintaining a secure and reliable operating environment. I primarily engaged with my coursework material on the Partner Training portal.
 
   #figure(
@@ -282,39 +304,54 @@ Converge makes use of various tools, consisting of both hardware and software, t
   )
 
 + *Enterprise Linux*:
-
   Enterprise Linux is known for its security features and reliability, making it an excellent choice for a secure company environment, ensuring the protection of critical data and applications.
 
   #figure(
     image("assets/rhel.png"),
-    caption: "The Red Hat Enterprise Linux desktop"
+    caption: "The Red Hat Enterprise Linux 9 desktop"
   )
 
 + *Podman*:
-
   Podman is a container engine -- used for effectively managing and sandboxing applications, allowing them to be efficiently rolled out and scaled as needed. It also has the feature of primarily running without escalated security permissions, which gives it an edge over its alternatives.
 
-  // TODO: podman hellow world figure
+  #figure(
+    image("assets/podman.png"),
+    caption: "The 'Hello World' image running on Podman"
+  )
 
 + *Kubernetes*:
-
   Kubernetes is primarily used for container orchestration and automating software deployment, scaling, and management by grouping containers as pods -- which can then be managed effectively.
 
-  // TODO: k8s figures
+  #figure(
+    image("assets/kubes-ui.png"),
+    caption: "The Kubernetes web interface"
+  )
 
 + *Windows Server 2019*:
-
   Windows Server 2019 provides a secure and stable platform for hosting critical company applications and services, with widespread support for commonly used technologies like Active Directory and built-in security features for data protection.
 
   #figure(
-    image("assets/rhel.png"),
-    caption: "The Red Hat Enterprise Linux desktop"
+    image("assets/win-server.png"),
+    caption: "The Windows Server 2019 Installer"
   )
 
-// TODO: add vmware, manageengine
++ *VMWare ESXi*:
+  It's an enterprise-class, type-1 virtual machine hypervisor developed by VMware for deploying and serving virtual computers. It runs on bare metal without running an operating system unlike other VMware products as it includes its own kernel.
+
+  #figure(
+    image("assets/esxi.png"),
+    caption: [VMware ESXi Host Client summary page from 6.0 U2 #cite("esxi")]
+  )
+
++ *ManageEngine Endpoint Central*:
+  Endpoint Central can manage endpoint devices (e.g. laptops, printers, phones) that are situated within the enterprise, allowing them to be monitored, administered, patched and updated remotely.
+
+  #figure(
+    image("assets/endpoint.png"),
+    caption: "Endpoint Central Asset Management page"
+  )
 
 + *Microsoft Teams*:
-
   Teams offers a secure platform for communication and collaboration, including features like end-to-end encryption and multi-factor authentication, ensuring confidential discussions and file sharing.
 
   #figure(
@@ -323,8 +360,7 @@ Converge makes use of various tools, consisting of both hardware and software, t
   )
 
 + *GitLab*:
-
-  Gitlab is a secure source code management and version control platform, essential for safeguarding proprietary source code and tracking changes while ensuring the integrity of the codebase. In addition, its self-hosting capabilities make it attractive for enterprise as it can be modified to meet specific security and operational requirements.
+  Gitlab is a source code management and version control platform, essential for safeguarding proprietary source code and tracking changes while ensuring the integrity of the codebase. In addition, its self-hosting capabilities make it attractive for enterprise as it can be modified to meet specific security and operational requirements.
 
   #figure(
     image("assets/gitlab.png"),
@@ -333,7 +369,7 @@ Converge makes use of various tools, consisting of both hardware and software, t
 
 == Quality of supervision
 
-As a member of the DSA #footnote("Data Centre, Security & Automation") team, I was assigned the head manager, Mr. Ugochukwu Okorie as my primary supervisor. Additionally I was to occasionally check in with the General Manager, Onyekachi Nnamdi, so that any company-wide concerns I have could be relayed to her.
+As a member of the DSA #footnote[Data Centre, Security & Automation] team, I was assigned the head manager, Mr. Ugochukwu Okorie as my primary supervisor. Additionally I was to occasionally check in with the General Manager, Onyekachi Nnamdi, so that any company-wide concerns I have could be relayed to her.
 
 Mr. Ugochukwu had a talk with me about my prior familiarity with Linux and interest in system administration and security and decided that it would be best for us to have biweekly meetings discussing what I'd done in the previous fortnight. He also gave me various tasks and assignments to complete and ensured I was following along with all the activites of the rest of the team, which involved attending and participating in meetings, and being entrusted with some trivial tasks.
 
@@ -353,8 +389,7 @@ Some of the more notable ones are:
 
 === Technical Skills
 
-// add cite
-- _Usage of standard POSIX #footnote("Portable Operating System Interface") tools_: Command-line utilities like `bash` (the GNU Bourne-Again Shell), `grep` (file pattern searcher) and `man` (manual pager) are irreplacable when working with servers all over the globe. They provide a standard way of interfacing with the internal workings of a system -- and these behaviours are laid out in the POSIX specification @posix.
+- _Usage of standard POSIX #footnote[Portable Operating System Interface] tools_: Command-line utilities like `bash` (the GNU Bourne-Again Shell), `grep` (file pattern searcher) and `man` (manual pager) are irreplacable when working with servers all over the globe. They provide a standard way of interfacing with the internal workings of a system -- and these behaviours are laid out in the POSIX specification @posix.
 
   Many modern OSes conform to this standard @unix-certified, so knowing how to use them correctly is an essential tool in the arsenal of a system administrator. Therefore, I learnt basic and advanced concepts related to these like shell redirection, task scheduling, and storage configuration, along with user and group management.
 
@@ -371,7 +406,7 @@ Some of the more notable ones are:
 
   // reference OS course
 
-- _Containerisation with Podman_: Containerisation packages applications, along with any required runtimes and dependencies, into units that can run independently and reliably on any computer system. They have the advantage of being lighter and more efficient than full-blown virtual machines, as well as offering more control over the scale of applications. Podman is the premier tool of the OCI #footnote("Open Containers Initiative") and has support for running containers without escalated privileges -- which dramatically increases its security compared to other container engines.
+- _Containerisation with Podman_: Containerisation packages applications, along with any required runtimes and dependencies, into units that can run independently and reliably on any computer system. They have the advantage of being lighter and more efficient than full-blown virtual machines, as well as offering more control over the scale of applications. Podman is the premier tool of the OCI #footnote[Open Containers Initiative] and has support for running containers without escalated privileges -- which dramatically increases its security compared to other container engines.
 
   Learning the ins and outs of Podman was one of the key experiences I had during my internship.
 
@@ -379,27 +414,38 @@ Some of the more notable ones are:
 
   It does this by dividing computing resources in the cluster into two groups -- the control plane which coordinates all the other nodes, and the nodes themselves on which the actual containers are deployed.
 
-  Red Hat has supported Kubernetes from inception as part of their OpenShift offering, and as such I was required to delve into it.
+  Red Hat has supported Kubernetes from inception as part of their OpenShift offering @redhat, and as such I was required to delve into it.
 
-  // TODO: cite https://www.redhat.com/en/blog/red-hat-and-google-collaborate-kubernetes-manage-docker-containers-scale 
-
-  // add https://en.wikipedia.org/wiki/File:Kubernetes.png
+  #figure(
+    image("assets/kubernetes.png"),
+    caption: [Kubernetes architecture diagram #cite("kubes")]
+  )
 
 - _Cloud development with the Red Hat OpenShift Container Platform_: OpenShift is a cloud platform that makes it easy to deploy and manage containerised applications on the hybrid cloud -- whether fully on the edge, or on premises. It builds on top of Kubernetes by adding tools like Prometheus for reliability monitoring and wrapping them all up in a simple, easy-to-use interface -- allowing enterprises to adopt it with ease and focus on actually maintaining their application.
  
  It also utilises Red Hat Enterprise Linux for a consistent platform anywhere it runs.
 
- // TODO: add that thing where openshift build on top of k8s
+ #figure(
+  image("assets/openshift.png"),
+  caption: [Architecture of the OpenShift Platform #cite("openshift")]
+ )
 
 - _Systems management with Red Hat Satellite_: Satellite is used to deploy and manage RHEL #footnote[Red Hat Enterprise Linux] hosts. It manages updates and automatically downloads them locally in order to make it easier to deploy to the fleet.
 
-It also supports separating hosts into different "environments", in order to facilitate software deployment and testing.
+  It also supports separating hosts into different "environments", in order to facilitate software deployment and testing.
 
 - _Automation with Red Hat Ansible Automation Platform_: Red Hat Ansible Automation Platform is an end-to-end automation platform to configure systems, deploy software, and orchestrate advanced workflows. It includes resources to create, manage, and scale across the entire enterprise.
 
   It helps to manage multiple machines using instructions stored in "playbooks", and when done well, playbooks are idempotent -- negating the risks of unwanted side effects.
 
-- Endpoint management with ManageEngine
+- _Unified Endpoint management with ManageEngine Endpoint Central_: Endpoint Central is a Unified Endpoint Management and security software that comprehensively addresses the requirements of IT administrators. 
+
+  It helps IT administrators to perform patch management, software deployment, mobile device management, OS deployment and take remote control to troubleshoot devices. And with the help of endpoint security features, which includes vulnerability assessment, application control, device control, BitLocker management and browser security, IT administrators can safeguard their network endpoints effectively.
+
+  #figure(
+    image("assets/meeting.png"),
+    caption: "My supervisor demonstrating the capabilities of Endpoint Central"
+  )
 
 === Soft skills
 
@@ -421,38 +467,144 @@ The knowledge gained during the course of the internship was highly influential 
 
 === In the Field of Study and Educational Career
 
-Typically, Computer Science focuses on the theoretical foundations of modern computing, with a little detour into popular applications like Web Development. But as a result of this internship, I've been exposed to lesser-known areas of Information Technology that are very crucial to modern business infrastrcutre -- system administration, application containerisation, and cloud deployments -- and as a result have more career prospects available to me.
+Typically, Computer Science focuses on the theoretical foundations of modern computing, with a little detour into popular applications like Web Development. 
+
+But as a result of this internship, I've been exposed to lesser-known areas of Information Technology that are very crucial to modern business infrastrcutre -- system administration, application containerisation, and cloud deployments -- and as a result, have more career prospects available to me.
 
 === In Converge
 
-I was able to work effectively and efficiently in the company. I collaborated with other employees in order to hit deadlines and cheieve goals -- thereby contributinf to the success of the company.
+I was able to work effectively and efficiently in the company. I collaborated with other employees in order to hit deadlines and cheieve goals -- thereby contributing to the success of the company.
 
 === In the Larger Society
 
-// TODO: get mussion
+The company created infrastructure for multi-national entities like financial institutions and manufacturing plants. Working effectively in Converge, trying to find the best solution to clients' problems contributd to their societal influence, as a catastrophe would be swifly averted before it inconvenienced millions of people.
 
-== Bridging gaps in knowledge with curriculum
+=== In Relation with Curriculum <bridge>
 
-== Relation to culture
+The knwledge gained in the internship builds upon some of the earlier concepts introduced in courses like:
 
-== Challenges
+- CSC125 _Operating Systems I_
+- CSC214 _High Performance Computing & Database Management I_
+- CSC223 _Computer Hardware_
+- CSC317 _Systems Analysis & Design_
 
-=== By me
+Without this practical experience, realising the true value of the aforementioned courses would have been difficult, if not impossible. 
 
-=== By company
+== Work Culture
 
-talk abotu profit margins for Q1
+The core values shared by Converge are Service, Teamwork, Achievement, Respect, and Spirituality. We were all encouraged to uphold these values in our work and business dealings.
+
+Spirituality was interesting for me -- I was initially shockd at the fact that a devotion session was held every morning from 8:15am to 9am, but over time I came to appreciate it.
+
+== Challenges Faced 
+
+As with any experience in life, there were challenges faced -- both by me as an individual struggling to get used to a new working environment, and the company as a whole during the economic downturn.
+
+=== By Me 
+
+- _Time Management Issues_: Coming into a new environment was jarring for me, as I suddenly found myself with a less regimented schedule and some free time on my hands. This led to me underestimating the amount of time some projects would take to complete and missing the deadlines as a result.
+
+- _Communication Issues_: I was not used to the idea of just getting up and talking to one's collegues, and as a result, missed out on some opportunities and created disorder in the organisation. 
+
+=== By Converge
+
+- _Deadline Issues_: The Data Centre team was unable to meet some of their deadlines for a Dangote project -- partly due to some shortcomings with contractors, along with problems with Red Hat Satellite. We had some calls with Red Hat support representatives to fix the latter issue.
+
+  #figure(
+    image("assets/deadlines.png"),
+    caption: "A table of missed deadlines for a client Satellite implementation"
+  )
+
+- _Economic Issues_: The Nigerian economy had been on a decline and, as a result, certain economic problems arose. The USD#footnote[United States Dollar]-NGN#footnote[Nigerian Naira] exchange rate flunctuating daily was one such problem, as Converge regularly liased with international companies which quoted prices in USD.
 
 == Projects
 
-=== Windows server
+During the course of my internship, I was able to take on several projects and trainings. Some of these are:
 
-=== VMs 
+=== Virtual Machines
 
-=== ManageEngine
+I was tasked with the creation of several virtual machines which ran:
+
+- *Windows Server 2019*: I was able to set up several Windows Server VMs for the purpose of testing out client software and making a proof of concept for endpoint management. I set them up on the main data centre ESXi host and networked them using industry-standard practices. I opened ports in the firewall to isolate them and only allow trusted applications to go through, such as Endpoint Central.
+
+  #figure(
+    image("assets/win-installer.png"),
+    caption: "The Windows Server 2019 installer 'Select edition' section"
+  )
+
+  #figure(
+    image("assets/win-explorer.png"),
+    caption: "The Windows GUI showing a File Explorer window"
+  )
+
+- *Red Hat Enterprise Linux 8*: For the purpose of going further in the trainings I completed I was encouraged to make RHEL virtual machines and tinker with them. I used tools like Subscription Manager to add external repositories to the virtual machines, allowing third-party software to be installed though the `dnf` package manager.
+
+  #figure(
+    image("assets/rhel-vm-email.png"),
+    caption: "An email with instructions to create a RHEL VM"
+  )
+
+  #figure(
+    image("assets/rhel-neofetch.png"),
+    caption: [A RHEL virtual machine running the `neofetch` CLI tool]
+  )
+
+=== ManageEngine Endpoint Central
+
+I was tasked with making a proof of concept deployment of Endpoint Central using the available virtual machines. This was done to determine whether it would be a viable offering for our clients. I also gave a presentation to the DSA team showing my finished work, findings, and recommendations.
+
+  #figure(
+    image("assets/central.png"),
+    caption: "Endpoint Central dashboard initialisation"
+  )
+
+  #figure(
+    image("assets/satellite.png"),
+    caption: "Installation of the Endpoint Central Server agent on a remote Red Hat Satellite machine"
+  )
+
+  #figure(
+    image("assets/endpoint-dash.png"),
+    caption: "Endpoint Central dashboard showing discovered computers"
+  )
 
 === Trainings completed
-list of courses and material
+
+In order to enhance my knowledge of various Red Hat products and solutions, I completed several accreditations and got on the way to becoming a RHCSA #footnote[Red Hat Certified System Administrator] and RHCE #footnote[Red Hat Certified Engineer]. Some courses I completed are:
+
+- RH124 _Red Hat System Administration 1_: The course provides students with Linux administration competence by focusing on core administration tasks.
+  
+  This course also provides a foundation for students who plan to become full-time Linux system administrators by introducing key command-line concepts and enterprise-level tools.
+
+  #figure(
+    image("assets/rh124.png"),
+    caption: "RH124 course content and interactive lab"
+  )
+
+- RH134 _Red Hat System Administration 2_: The course goes deeper into core Linux system administration skills in storage configuration and management, installation and deployment of Red Hat Enterprise Linux, management of security features such as SELinux, control of recurring system tasks, management of the boot process and troubleshooting, basic system tuning, and command-line automation and productivity. 
+
+- RH403 _Red Hat Satellite 6 Administration_: This lab-based course demonstrates got to cnfigure Red Hat Satellite 6 to deploy and manage Red Hat Enterprise Linux systems and software at any scale, going into how to manage the software development life cycle of a subscribed host and its configuration, and to provision hosts integrated with software and Ansible configuration management upon deployment.
+
+  #figure(
+    image("assets/satellite-test.png"),
+    caption: "The RH403 interactive lab being initialised"
+  )
+
+- RH294 _Red Hat Enterprise Linux Automation with Ansible_: The course is designed for Linux system administrators and developers who need to automate provisioning, configuration, application deployment, and orchestration. 
+
+- DO180 _Red Hat OpenShift Administration I: Managing Containers and Kubernetes_: This course prepares OpenShift Cluster Administrators to perform day-to-day management of Kubernetes workloads and collaborate with Developers, DevOps Engineers, System Administrators, and SREs to ensure the availability of application workloads. 
+
+  This course focuses on managing typical end-user applications that are often accessible from a web or mobile UI and represent the majority of cloud native and containerised workloads.
+
+#figure(
+  grid(
+    columns: (49%, 2%, 49%),
+    image("assets/delivery.png"),
+    "",
+    image("assets/platform.png")
+  ),
+  caption: "Red Hat Delivery Specialist Accreditation certificates"
+)
 
 #pagebreak(weak: true)
 
@@ -460,8 +612,35 @@ list of courses and material
 
 == Conclusion
 
+My internship experience has been nothing short of transformative and immensely beneficial to both my education and personal growth. Throughout this journey, I have had the privilege of gaining hands-on experience and insights that have truly opened my eyes to the complexities and intricacies of the industry. This internship has not only expanded my technical knowledge but has also enriched my understanding of the real-world applications of the concepts I've learned in the classroom.
+
+One of the most significant takeaways from this experience has been the opportunity to work alongside seasoned professionals and experts in the industry. Their mentorship and guidance have been invaluable in shaping my understanding of best practices, problem-solving approaches, and effective communication within a professional setting. Learning from their experiences and absorbing their wisdom has not only improved my technical skills but has also fostered a sense of maturity and professionalism that will undoubtedly serve me well in my future career.
+
+In conclusion, my internship has been a remarkable chapter in my education, one that has not only expanded my knowledge but has also instilled in me a sense of purpose and direction. I am now better equipped, not just academically, but as a more well-rounded individual, ready to face the challenges and opportunities that lie ahead. I am deeply grateful for this eye-opening experience and look forward to applying the valuable lessons learned here in my future endeavors.
+
 == Recomendations
 
+While the work experience program has undeniably proven to be an invaluable component of our education, it is imperative that we address the need for a more practical classroom experience to prevent students from experiencing culture shock when they enter the business world.
+
+First and foremost, there should be a deliberate effort to enhance the practicality of classroom education. As we saw in @bridge, incorporating more hands-on projects, case studies, and real-world simulations into the curriculum is crucial to better prepare students for the challenges and dynamics of a professional environment. By doing so, we can help students develop essential skills such as critical thinking, problem-solving, and effective communication, all of which are indispensable in the workplace.
+
+Moreover, we should explore opportunities for collaboration with industry partners. Encouraging closer ties between educational institutions and businesses can provide students with a more accurate understanding of what to expect in a professional setting. This could involve inviting guest lecturers, organizing industry visits, or establishing coursework that integrates classroom learning with practical experience. Such initiatives can demystify the corporate world and make students more confident as they enter the workforce.
+
+Mentorship programs within our educational system would also be highly beneficial. These programs can offer students valuable guidance and insights from professionals in their chosen fields, further bridging the gap between theory and practice.
+
+In addition to technical skills, there should be a stronger emphasis on soft skills development within our curriculum. This includes training in areas like communication, teamwork, time management, and problem-solving. These skills are vital for navigating the challenges students may encounter in a business setting and will contribute to a more well-rounded skill set.
+
+Furthermore, we should consider revising our assessment methods to incorporate more practical, real-world tasks. This would enable students to demonstrate their ability to apply their knowledge and skills in practical scenarios, providing a more accurate representation of their readiness for the professional world.
+
+In conclusion, while our work experience program has been an excellent preparatory element, we must not neglect the need to improve the classroom environment. By implementing these recommendations, we can better equip our students with the skills and knowledge they need to excel in their future careers, fostering a smoother and more confident transition into the business world.
+
 #pagebreak()
+
+#show heading: it => [
+    #set text(14pt, weight: "bold")
+    #block([
+        #it.body
+    ])
+]
 
 #bibliography("reference.yml", title: "References", style: "apa")
